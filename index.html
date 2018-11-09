@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Match-match game</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+  <div class="wrapper" id='wrapper'>
+
+    <section class="welcome-window" id='welcomeWindow'>
+
+      <h1>Welcome to Match-Match Game!</h1>
+      <div class="rules-container">
+        <div class="game-rules">
+
+          <h2>How to play:</h2>
+          <div>Memory is a counter game where the object is to find pairs.</div>
+
+          <h2>To Play:</h2>
+          <ol>
+            <li>Select two cards to try to match the pictures.</li>
+            <li>If you match the pictures you can go again.</li>
+            <li>If they don't match the computer turns them back.</li>
+            <li>The player who finds аll pairs wins!</li>
+            <li>Have Fun!</li>
+          </ol>
+
+        </div>
+
+
+        <form name='userSelectionForm'>
+
+          <fieldset name='userData'>
+            <h2>Please, fill the form</h2>
+            <div>
+              <input type="text" id='userName' placeholder='Enter your first name' required>
+              <label for="userName">Your name</label>
+            </div>
+            <div>
+              <input type="text" id="userLastName" placeholder='Enter your last name' required>
+              <label for="userLastName">Your last name</label>
+            </div>
+            <div>
+              <input type="email" id='email' placeholder='Enter your email' required>
+              <label for="email">Your email</label>
+            </div>
+          </fieldset>
+
+          <fieldset name='cardsBack'>
+            <h2>Cards' back</h2>
+            <div>
+              <input type="radio" name='cardsBack' id='cardsback1' value="1" required>
+              <label for="cardsback1"><img src="assets/images/cardsback1.jpg" alt="first cards' back"></label>
+            </div>
+            <div>
+              <input type="radio" name='cardsBack' id='cardsback2' value="2">
+              <label for="cardsback2"><img src="assets/images/cardsback2.jpg" alt="sec cards' back"></label>
+            </div>
+            <div>
+              <input type="radio" name='cardsBack' id='cardsback3' value="3">
+              <label for="cardsback3"><img src="assets/images/cardsback3.jpg" alt="third cards' back"></label>
+            </div>
+          </fieldset>
+
+          <fieldset name='level'>
+            <h2>Level</h2>
+            <div>
+              <input type="radio" name='level' id='easy' value="3" required>
+              <label for="easy">Easy</label></div>
+            <div>
+              <input type="radio" name='level' id='medium' value="6">
+              <label for="medium">Medium</label></div>
+            <div>
+              <input type="radio" name='level' id='professional' value="12">
+              <label for="professional">Professional</label></div>
+          </fieldset>
+
+
+          <button type='submit' id="startButton" value='gameStart'>Let's play</button>
+          <!-- пересмотреть классы!!!!!! -->
+
+        </form>
+      </div>
+    </section>
+
+
+    <section class="game-window hidden" id='gameWindow'>
+      <main class='cards-container' id='cardsContainer'></main>
+      <div class="timer" id='timer'></div>
+    </section>
+
+    <section class='congratulations-window hidden' id="congratulationsWindow">
+      <h2>You did it! Welldone!</h2>
+      <h3>TOP-10 players of this level</h3>
+      <ol id="score"></ol>
+    </section>
+
+
+  </div>
+
+  <script src='assets/main.js'></script>
+
+</body>
+</html>
